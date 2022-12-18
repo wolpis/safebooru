@@ -4,8 +4,9 @@
 name: Save
 
 on:
-  schedule:
-    - cron: '0 */1 * * *'
+  push:
+    branches:
+      - main
 
 permissions:
   contents: read
