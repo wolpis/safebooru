@@ -38,7 +38,9 @@ class Posts(Request):
                         "tags": i["tags"],
                         "img": self.IMG_URL + i["directory"] + "/" + i["image"],
                     }
-                    if requests.get(url=update_url, headers=headers):
+                    re = requests.get(url=update_url, headers=headers)
+                    result = re.json()
+                    if result["data"]:
                         success += 1
                         s_list.append(i["id"])
                     else:
