@@ -44,7 +44,7 @@ class Posts(Request):
                         success += 1
                         s_list.append(i["id"])
                     else:
-                        fail += 0
+                        fail += 1
                         f_list.append(i["id"])
                     time.sleep(1)
             s_text = f"성공갯수 : {success}\n{s_list}"
