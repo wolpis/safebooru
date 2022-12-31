@@ -15,6 +15,7 @@ class Request:
 
     def request(self, url: str):
         re = requests.get(url=url)
+        print(re.text)
         return re.json()
 
 
